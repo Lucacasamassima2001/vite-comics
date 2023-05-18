@@ -27,7 +27,7 @@ export default {
 <style lang="scss" scoped>
 header{
   margin-inline: auto;
-  width: 80%;
+  width: 70%;
   height: 130px;
   display: flex;
   justify-content: space-between;

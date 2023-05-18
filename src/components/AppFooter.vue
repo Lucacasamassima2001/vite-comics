@@ -99,7 +99,7 @@ export default {
 
 
 <style lang="scss" scoped>
-
+@use './../assets/styles/partials/variables' as *;
 .container-infos{
   background-color: rgba(2,130,249,255);
   height: 150px;
@@ -118,7 +118,8 @@ export default {
   display: flex;
   align-items: center;
   gap: 1em;
-  color: white;
+  color: $base-color;
+  white-space: nowrap;
   
   img{
     height: 70px;
@@ -149,7 +150,7 @@ export default {
     display: flex;
     ul{
       list-style: none;
-      color: white;
+      color: $base-color;
       margin-right: 1em;
       
       li{
@@ -159,7 +160,7 @@ export default {
       }
 
       .subtitle{
-          color: white;
+          color: $base-color;
           font-size: 1.1em;
           font-weight: bold;
           margin-bottom: .5em;
@@ -201,7 +202,7 @@ export default {
       padding: 1em;
       border: 2px solid rgba(2,130,249,255);
       background-color: rgba(48,48,48,255);
-      color: white;
+      color: $base-color;
       height: 50px;
     }
 

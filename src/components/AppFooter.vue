@@ -101,11 +101,10 @@ export default {
 <style lang="scss" scoped>
 @use './../assets/styles/partials/variables' as *;
 .container-infos{
-  background-color: rgba(2,130,249,255);
+  position: relative;
+  background-color: $brand-color;
   height: 150px;
-  display: flex;
-  align-items: center;
-  z-index: 6;
+  @include align-center;
   .infos{
     display: flex;
     gap: 2em;
@@ -115,8 +114,7 @@ export default {
 }
 
 .info {
-  display: flex;
-  align-items: center;
+  @include align-center;
   gap: 1em;
   color: $base-color;
   white-space: nowrap;
@@ -131,12 +129,11 @@ export default {
 
 }
 
-
-
 .container-specs{
   background-image: url(../assets/img/footer-bg.jpg);
   height: 300px;
   padding: 3em;
+  display: flex;
   
   .container{
     width: 80%;
@@ -155,8 +152,12 @@ export default {
       
       li{
         font-size: .6em;
+        cursor: pointer;
         color: rgb(167, 161, 161);
         margin-top: .5em;
+        &:hover{
+          text-decoration: underline;
+        }
       }
 
       .subtitle{
@@ -173,47 +174,39 @@ export default {
 .dc-logo{
   width: 50%;
   height: 100%;
-  position: relative;
+  @include align-center;
   
   img{
     width: 450px;
-    position: absolute;
-    top: -120px;
   }
 }
 
-
-
 .socials{
+  position: relative;
   height: 100px;
-  background-color: rgba(48,48,48,255);
-  
-
+  background-color: $brand-color-dark;
   
   .container{
     width: 70%;
     height: 100%;
-    margin-inline: auto;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-
+    @include align-justify-center;
       button{
       padding: 1em;
-      border: 2px solid rgba(2,130,249,255);
-      background-color: rgba(48,48,48,255);
+      border: 2px solid $brand-color;
+      background-color: $brand-color-dark;
       color: $base-color;
       height: 50px;
+      cursor: pointer;
+      &:active{
+        background-color: grey;
+      }
     }
 
       .platforms{
-      display: flex;
-      align-items: center;
+      @include align-center;
       gap: 1em;
-      color: rgba(2,130,249,255);
+      color: $brand-color;
     }
   }
 }
-
-
 </style>
